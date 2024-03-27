@@ -27,7 +27,7 @@ const Hero = () => {
                 <img src={AboutImg}/>
             </div>
 
-            <div className='absolute md:right-28 right-10 top-28 animate-bounce'><img className='rounded-full md:w-[100px] w-[60px]' src='http://khabar4u.in/wp-content/uploads/2020/06/og-magicpin-icon.png'/></div>
+            <div className='absolute md:right-28 right-10 top-28 animate-bounce'><img className='rounded-full md:w-[100px] w-[60px]' src='https://images.yourstory.com/cs/images/companies/6723190122636619372819335513378071094231040o-1590990173281.png?fm=png&auto=formatar=1:1&mode=fill&fill=solid'/></div>
             <div className='absolute right-50 bottom-1 animate-bounce'><img className='md:w-[160px] w-[90px]' src='https://1000logos.net/wp-content/uploads/2021/05/Swiggy-emblem.png'/></div>
             <div className='absolute md:right-45  md:top-60 top-24  animate-bounce'><img className='md:w-[120px] w-[60px]' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-uGiQUqqdyVd5f5WggAZInmglTur8FsVOSJj71ZfYwBMVnZWt3zskcbD5aJo3lSe4SmqfmRxdBReyRh9YKdW87wMk4C2D-tGSK5IahdDGuApnboIiWCfSegMuy5gzU1m9eCXOdI8P4h1yrfBvp9bYfvuDksQzHKvFKrwbhBWkQ6wgB_B15EbobuiZ/s16000/image2.png'/></div>
             <div className='absolute right-6 md:right-20 md:bottom-10 bottom-1 rounded-xl animate-bounce'><img className='md:w-[100px] rounded-xl w-[60px]' src='https://logodownload.org/wp-content/uploads/2019/05/uber-eats-logo-1.png'/></div>
