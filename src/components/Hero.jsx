@@ -9,10 +9,10 @@ const Hero = () => {
         <div className='md:w-[50%] w-full px-[10px] md:px-[50px]'>
             <h3 className='text-[17px] leading-7 text-[#111] font-medium mb-[23px]'> - Food Consulting Service </h3>
 
-            <p className='font-medium leading-[1.1] md:text-[70px] text-[38px] km:text-[60px] capitalize '>Food <span className='text-btn'>Regitration</span>
+            <p className='font-medium leading-[1.1] md:text-[60px] text-[38px] km:text-[50px] capitalize '>Food <span className='text-btn'>Registration</span>
  <br /> Service Agency</p>
 
-            <p className='text-[15px] pt-[25px] text-[#72747c] md:pr-[75px] leading-7 mb-[40px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere nisi, ut veritatis laudantium non nos.</p>
+            <p className='text-[15px] pt-[25px] text-[#72747c] md:pr-[75px] leading-7 mb-[40px]'>Bring your restaurant online with Magic Scale’s comprehensive onboarding services and hassle-free integration .</p>
             
             <Button bgColor={"btn"}
              colors={"#fff"} 

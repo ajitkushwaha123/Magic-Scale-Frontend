@@ -6,18 +6,18 @@ const Trust = () => {
   const TrustValues = [
     {
       iconImg: onlineShop,
-      title: 'Get Listed',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere nisi.',
+      title: 'Seamless Integration' ,
+      description: 'Unlock complete integration, from FSSAI registration to online operations, and boost sales with the magic of Scale.',
     },
     {
       iconImg: scheduleIcon,
-      title: 'Fast Service',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere nisi.',
+      title: 'Fastest Account Setup' ,
+      description: 'Get up and running on Zomato and Swiggy at lightning speed with the magic Scale.',
     },
     {
       iconImg: hoursIcon,
-      title: '24/7 Support',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere nisi.',
+      title: '24/7 Support' ,
+      description: 'Experiencing an issue? Dont worry! Our support team is available 24/7 .',
     },
   ];
 
