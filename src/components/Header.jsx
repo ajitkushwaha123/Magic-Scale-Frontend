@@ -3,12 +3,17 @@ import { FaHeart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { Logo } from '../assets';
-import { Link , NavLink } from 'react-router-dom';
+import { Link , NavLink, useNavigate } from 'react-router-dom';
 import Button from './Button';
 
 // import { IoIosArrowDown } from "react-icons/io";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const clicked = () => {
+    navigate('/form');
+  }
 
   return (
      <>
@@ -27,7 +32,7 @@ const Header = () => {
           </div>
 
           <div className='rounded-xl  text-white hover:text-[#111] hover:bg-[#fff]'>
-            <Button colors={"#fff"} title={"Enquiry"} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
+            <Button colors={"#fff"} title={"Enquiry"} onClick={clicked} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
           </div>
        </nav>
      </>
