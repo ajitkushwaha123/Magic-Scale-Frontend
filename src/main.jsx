@@ -7,18 +7,16 @@ import Layout from './Pages/Layout.jsx';
 import Hero from './components/Hero.jsx';
 import Home from './Pages/Home.jsx';
 import { Form } from './components/Form.jsx';
+import Register from './components/Registration.jsx';
+import Login from './components/Login.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements (
     <Route path='/' element={<Layout />}>
       <Route path='/' element={<Home />} />
       <Route path='/form' element={<Form />} />
-      {/* <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
-      <Route path='/cart' element={<Cart />} />
-      <Route path='/productpage' element={<ProductPage />} />
-      <Route path='/test' element={<Test />}/>
-      <Route element={<Error />} /> */}
+      <Route path='/login' element={<Login />} />
     </Route>
   )
 )
