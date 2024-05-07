@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 
 const Login = () => {
 
     const [phone , setPhone] = useState("");
     const [password , setPassword] = useState("");
 
-    const user = {
+    const userLogin = {
         "phone" : phone,
         "password" : password,
     }
@@ -14,17 +15,17 @@ const Login = () => {
         event.preventDefault();
 
         console.log("clicked");
-        console.log(user);
+        console.log(userLogin);
     }
 
   return (
     <div>
-      <main className="w-full h-screen flex flex-col items-center justify-center bg-gray-50 sm:px-4">
+      <main className="w-full h-screen px-[15px] flex flex-col items-center justify-center bg-gray-50 sm:px-4">
             <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
                 <div className="text-center">
                     <div className="mt-5 space-y-2">
-                        <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Create an account</h3>
-                        <p className="">Already have an account? <a href="javascript:void(0)" className="font-medium text-indigo-600 hover:text-indigo-500">Log in</a></p>
+                        <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Login to account</h3>
+                        <p className="">Already have an account? <NavLink to={"/register"} className="font-medium text-indigo-600 hover:text-indigo-500">Log in</NavLink></p>
                     </div>
                 </div>
                 <div className="bg-white shadow p-4 py-6 sm:p-6 sm:rounded-lg">

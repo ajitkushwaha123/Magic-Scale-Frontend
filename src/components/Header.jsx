@@ -1,7 +1,4 @@
 import React from 'react';
-import { FaHeart } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
 import { Logo } from '../assets';
 import { Link , NavLink, useNavigate } from 'react-router-dom';
 import Button from './Button';
@@ -12,7 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const clicked = () => {
-    navigate('/form');
+    navigate('/login');
   }
 
   return (
@@ -32,7 +29,7 @@ const Header = () => {
           </div>
 
           <div className='rounded-xl  text-white hover:text-[#111] hover:bg-[#fff]'>
-            <Button colors={"#fff"} title={"Enquiry"} onClick={clicked} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
+            <Button colors={"#fff"} title={"Login"} onClick={clicked} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
           </div>
        </nav>
      </>
