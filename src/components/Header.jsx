@@ -2,14 +2,17 @@ import React from 'react';
 import { Logo } from '../assets';
 import { Link , NavLink, useNavigate } from 'react-router-dom';
 import Button from './Button';
+import { useUserAuth } from '../context/UserAuthContext'
 
 // import { IoIosArrowDown } from "react-icons/io";
 
 const Header = () => {
   const navigate = useNavigate();
+  const {user , logout} = useUserAuth();
+  console.log(user);
 
   const clicked = () => {
-    navigate('/login');
+    alert("Coming Soon");
   }
 
   return (
@@ -28,9 +31,22 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className='rounded-xl  text-white hover:text-[#111] hover:bg-[#fff]'>
+          {/* <div className='rounded-xl  text-white hover:text-[#111] hover:bg-[#fff]'>
             <Button colors={"#fff"} title={"Login"} onClick={clicked} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
-          </div>
+          </div> */}
+
+          {/* ccccccc */}
+
+          <NavLink to={"/login"} >
+            {!user && 
+              <Button colors={"#fff"} title={"Login"} onClick={clicked} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
+            }
+            </NavLink>
+            <NavLink to={"/"} >
+            {user &&
+              <div className='flex justify-center items-center'><img className='rounded-full w-[40px] h-[40px]' src={user.photoURL}/></div>
+            }
+           </NavLink>
        </nav>
      </>
   )

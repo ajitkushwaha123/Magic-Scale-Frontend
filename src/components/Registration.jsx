@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link ,NavLink, useNavigate } from 'react-router-dom';
 import Login from './Login';
+import { useUserAuth } from '../context/UserAuthContext';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
@@ -18,7 +20,27 @@ const Register = () => {
         "password" : password,
     }
 
+    const [error , setError] = useState("");
+
     const navigate = useNavigate();
+
+    const {googleSignIn} = useUserAuth();
+
+    const handlegoogleSignIn = async (e) => 
+        {
+          e.preventDefault();
+          try{
+            await googleSignIn();
+            navigate('/');
+          }catch(err)
+          {
+            setError(err.message);
+          }
+        }
+
+        const handleSubmit = () => {
+            navigate('/login');
+        }
 
     const register = () => {
         event.preventDefault();
@@ -85,14 +107,14 @@ const Register = () => {
                                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                             />
                         </div>
-                        <button onClick={() => {register()}}
+                        <button onClick={handleSubmit()}
                             className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
                         >
                             Create account
                         </button>
                     </form>
                     <div className="mt-5">
-                        <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+                        <button onClick={handlegoogleSignIn} className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
                             <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_17_40)">
                                     <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />

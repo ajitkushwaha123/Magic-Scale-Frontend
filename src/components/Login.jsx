@@ -1,15 +1,36 @@
 import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
+import { useUserAuth } from '../context/UserAuthContext';
+import { ToastContainer , toast  } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Login = () => {
 
     const [phone , setPhone] = useState("");
     const [password , setPassword] = useState("");
+    const [error , setError] = useState("");
 
     const userLogin = {
         "phone" : phone,
         "password" : password,
     }
+    
+
+    const {googleSignIn} = useUserAuth();
+
+    const handlegoogleSignIn = async (e) => 
+        {
+          e.preventDefault();
+          try{
+            await googleSignIn();
+            navigate('/');
+          }catch(err)
+          {
+            setError(err.message);
+          }
+        }
 
     const navigate = useNavigate();
 
@@ -65,7 +86,7 @@ const Login = () => {
                         </button>
                     </form>
                     <div className="mt-5">
-                        <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+                        <button onClick={handlegoogleSignIn} className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
                             <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_17_40)">
                                     <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />
