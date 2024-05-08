@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link ,NavLink } from 'react-router-dom';
+import { Link ,NavLink, useNavigate } from 'react-router-dom';
 import Login from './Login';
 
 const Register = () => {
@@ -18,11 +18,15 @@ const Register = () => {
         "password" : password,
     }
 
+    const navigate = useNavigate();
+
     const register = () => {
         event.preventDefault();
 
         console.log("clicked");
         console.log(userRegister);
+        alert("Coming Soon");
+        navigate('/');
     }
 
   return (

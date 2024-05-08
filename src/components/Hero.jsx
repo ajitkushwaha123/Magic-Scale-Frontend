@@ -1,8 +1,16 @@
 import React from 'react'
 import Button from '../components/Button'
 import { AboutImg } from '../assets'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+
+  const navigate = useNavigate();
+
+  const chat = () => {
+    navigate('https://wa.me/918826073117')
+  }
+
   return (
     <div className='w-full md:h-screen h-auto md:px-[100px] pl-[20px] pt-[164px] bg-mainBg mt-[-80px]'>
       <div className='w-full flex flex-col md:flex-row'>
@@ -19,6 +27,7 @@ const Hero = () => {
              hoverBg={"#fff"} 
              title="Let’s talk — Send a message"
              hoverColor={"#111"}
+             onClick={chat()}
              />
         </div>
 

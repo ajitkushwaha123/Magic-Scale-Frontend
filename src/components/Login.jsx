@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -11,11 +11,15 @@ const Login = () => {
         "password" : password,
     }
 
+    const navigate = useNavigate();
+
     const register = () => {
         event.preventDefault();
 
         console.log("clicked");
         console.log(userLogin);
+        alert("Coming Soon");
+        navigate('/');
     }
 
   return (
@@ -25,7 +29,7 @@ const Login = () => {
                 <div className="text-center">
                     <div className="mt-5 space-y-2">
                         <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Login to account</h3>
-                        <p className="">Already have an account? <NavLink to={"/register"} className="font-medium text-indigo-600 hover:text-indigo-500">Log in</NavLink></p>
+                        <p className="">Don't have an account? <NavLink to={"/register"} className="font-medium text-indigo-600 hover:text-indigo-500">Register now</NavLink></p>
                     </div>
                 </div>
                 <div className="bg-white shadow p-4 py-6 sm:p-6 sm:rounded-lg">
