@@ -7,10 +7,6 @@ const Hero = () => {
 
   const navigate = useNavigate();
 
-  const chat = () => {
-    navigate('https://wa.me/918826073117')
-  }
-
   return (
     <div className='w-full md:h-screen h-auto md:px-[100px] pl-[20px] pt-[164px] bg-mainBg mt-[-80px]'>
       <div className='w-full flex flex-col md:flex-row'>
@@ -22,13 +18,14 @@ const Hero = () => {
 
             <p className='text-[15px] pt-[25px] text-[#72747c] md:pr-[75px] leading-7 mb-[40px]'>Bring your restaurant online with Magic Scale’s comprehensive onboarding services and hassle-free integration .</p>
             
+            <a href='https://wa.me/919311330885'>
             <Button bgColor={"btn"}
              colors={"#fff"} 
              hoverBg={"#fff"} 
-             title="Let’s talk — Send a message"
+             title="Let’s talk — Whatsapp Us"
              hoverColor={"#111"}
-             onClick={chat()}
              />
+            </a>
         </div>
 
         <div>
@@ -49,5 +46,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-// https://logodownload.org/wp-content/uploads/2019/05/uber-eats-logo-1.png
