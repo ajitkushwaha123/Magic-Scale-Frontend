@@ -11,10 +11,6 @@ const Header = () => {
   const {user , logout} = useUserAuth();
   console.log(user);
 
-  const clicked = () => {
-    alert("Coming Soon");
-  }
-
   return (
      <>
        <nav className='bg-transparent w-full sticky top-0 flex items-center justify-between h-[80px] z-10 sm:px-[100px] px-[15px]'>
@@ -31,15 +27,10 @@ const Header = () => {
             </ul>
           </div>
 
-          {/* <div className='rounded-xl  text-white hover:text-[#111] hover:bg-[#fff]'>
-            <Button colors={"#fff"} title={"Login"} onClick={clicked} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
-          </div> */}
-
-          {/* ccccccc */}
-
+          <div className='rounded-xl  text-white hover:text-[#111] hover:bg-[#fff]'>
           <NavLink to={"/login"} >
             {!user && 
-              <Button colors={"#fff"} title={"Login"} onClick={clicked} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
+              <Button colors={"#fff"} title={"Login"} bgColor={'btn'} hoverColor={"#111"} hoverBg={"#fff"} hoverBorder={"btn"}/>
             }
             </NavLink>
             <NavLink to={"/"} >
@@ -47,6 +38,11 @@ const Header = () => {
               <div className='flex justify-center items-center'><img className='rounded-full w-[40px] h-[40px]' src={user.photoURL}/></div>
             }
            </NavLink>
+          </div>
+
+          {/* ccccccc */}
+
+      
        </nav>
      </>
   )
