@@ -7,6 +7,7 @@ import { UserAuthContextProvider } from './context/UserAuthContext.jsx';
 import Home from './Pages/Home.jsx';
 import Login from './components/Login.jsx';
 import Register from './components/Registration.jsx';
+import Checkout from './components/Checkout.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           {/* <Route path='/' element={<Layout />} /> */}
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/checkout' element={<Checkout />}/>
           {/* <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/abs-workout/' element={<AbsWorkout />} />
