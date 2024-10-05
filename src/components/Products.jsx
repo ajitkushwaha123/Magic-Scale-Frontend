@@ -7,7 +7,7 @@ const Products = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/checkout');
+        // navigate('/checkout');
     }
 
     const restaurantItems = [
